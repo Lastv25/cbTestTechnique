@@ -12,12 +12,12 @@ And a pdf file:
 # Installation
 To run the scripts you need to
 - Download the folder  
-- Create a virtualenv in the root of the folder  
+- Create a virtualenv in the root of the folder (these scripts run with python 3.7) 
 - Activate the Virtual Environment
 - Install the following python libraries: xlrd, pandas
 
 
 # Commands to Run the scripts
 
-- data_analysis.py: there is no option for this file, it is run simply by running python3 data_analysis.py
-- test.py: the user defines the number of products he wants to be shown 
+- data_analysis.py: there is no option for this file, it is run simply by running python data_analysis.py
+- test.py: the user defines the number of products he wants to be shown as an input parameter. Run python test.py nbr_to_be_shown (example: python test.py 2) 
