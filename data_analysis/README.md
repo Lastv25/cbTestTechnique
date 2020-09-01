@@ -1,0 +1,20 @@
+# Summary
+
+This folder contains two files:  
+  - The data_analysis.py contains a script that parses the two documents and shows the tables and results used 
+in the data analysis section of the report.   
+  - The test.py file parses the two documents and asks the user for a number of product he wants to be shown.
+The script returns the most pertinent products.  
+
+# Installation
+To run the scripts you need to
+- Download the folder  
+- Create a virtualenv in the root of the folder  
+- Activate the Virtual Environment
+- Install the following python libraries: xlrd, pandas
+
+
+# Commands to Run the scripts
+
+- data_analysis.py: there is no option for this file, it is run simply by running python3 data_analysis.py
+- test.py: the user defines the number of products he wants to be shown 
