@@ -21,3 +21,7 @@ To run the scripts you need to
 
 - data_analysis.py: there is no option for this file, it is run simply by running python data_analysis.py
 - test.py: the user defines the number of products he wants to be shown as an input parameter. Run python test.py nbr_to_be_shown (example: python test.py 2) 
+
+# Remarks
+
+The script test.py may take some time to show the results.
