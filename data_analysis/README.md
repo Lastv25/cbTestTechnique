@@ -1,10 +1,13 @@
 # Summary
 
-This folder contains two files:  
+This folder contains two python files:  
   - The data_analysis.py contains a script that parses the two documents and shows the tables and results used 
 in the data analysis section of the report.   
   - The test.py file parses the two documents and asks the user for a number of product he wants to be shown.
 The script returns the most pertinent products.  
+
+And a pdf file:
+  - Report.pdf answers to the questions asked in the test.
 
 # Installation
 To run the scripts you need to
