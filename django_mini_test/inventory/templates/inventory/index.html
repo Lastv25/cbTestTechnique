@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Inventory</title>
+<style>
+    body {
+        background-color: white;
+    }
+    hr {
+        color: green;
+    }
+    h1, p {
+        color : green;
+    }
+    a {
+        text-decoration: none;
+        color: green;
+    }
+    a:hover {
+        color:greenyellow;
+    }
+    .left_band {
+        background-image: url("/static/left.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20%;
+        height: 100%;
+        position: fixed;
+        top: 0; left: 0;
+        margin: 0; padding: 0;
+    }
+    .right_band {
+        background: url("/static/right.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20%;
+        position: fixed;
+        height: 100%;
+        top: 0; right: 0;
+        margin: 0; padding: 0;
+    }
+    .content {
+        text-align: center;
+        margin-left: 20%;
+        width: 60%;
+    }
+</style>
+</head>
+<body>
+    <div class="left_band">
+    </div>
+    <div class="right_band">
+    </div>
+    <div class="content">
+    <h1><U>INVENTORY</U></h1>
+    <p>An item can be removed by accessing to his own page where you will find a remove button.</p>
+    <hr>
+    <BR>
+    {% if latest_inventory_list %}
+        {% for item in latest_inventory_list %}
+            {% if item.is_outdated %}
+            <a href="{% url 'detail' item.id %}"><img src={{ item.image_url }} style="vertical-align: middle" width="200" height="200">  {{ item.name }} is outdated. <U><b>{{ item.expiry_date }}</b></U></a>
+            {% else %}
+            <a href="{% url 'detail' item.id %}"><img src={{ item.image_url }} style="vertical-align: middle" width="200" height="200">  {{ item.name }} will be outdated after : <U><b>{{ item.expiry_date }}</b></U></a>
+            {% endif %}
+            <br>
+        {% endfor %}
+    {% else %}
+        <p>No inventory are available.</p>
+    {% endif %}
+    <BR>
+    <hr>
+    <button><a href="add">Add Item</a></button>
+    </div>
+</body>
+</html>
